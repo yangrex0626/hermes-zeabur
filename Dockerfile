@@ -1,0 +1,10 @@
+FROM nousresearch/hermes-agent:latest
+
+ENV HERMES_HOME=/opt/data
+ENV HERMES_DASHBOARD=1
+ENV HERMES_DASHBOARD_HOST=0.0.0.0
+ENV HERMES_DASHBOARD_PORT=9119
+
+EXPOSE 9119
+
+CMD ["gateway", "run"]
